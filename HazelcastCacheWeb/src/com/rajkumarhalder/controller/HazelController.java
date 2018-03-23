@@ -17,6 +17,7 @@ public class HazelController {
 	@Autowired
 	private HazelCastService hazelCastService;
 	
+	@RequestMapping("getall")
 	public Object getUserList(HttpServletRequest request,HttpServletResponse response) {
 		return hazelCastService.getCachedData(HazelcastConstant.USERLIST_CACHED_DATA_KEY);
 		

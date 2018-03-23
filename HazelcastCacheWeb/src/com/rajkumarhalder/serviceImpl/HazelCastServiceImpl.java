@@ -21,7 +21,7 @@ public class HazelCastServiceImpl implements HazelCastService{
 	@Override
 	public Object getCachedData(String key) {
 		 
-		return hazelcastInstance.getMap(key).containsKey(key);
+		return hazelcastInstance.getMap(key).get(key);
 	}
 
 }
